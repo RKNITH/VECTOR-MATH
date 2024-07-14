@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector Applications</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Vector Applications in Mathematics</h1>
+    </header>
+    <main>
+        <section id="history">
+            <h2>History of Vectors</h2>
+            <p>Vectors have a rich history in mathematics and physics, evolving over centuries. Their development has
+                been pivotal in various scientific fields, shaping our understanding of the physical world and advancing
+                technology.</p>
+            <ul>
+                <li><b>Ancient Greece:</b>
+                    <ul>
+                        <li>Concepts of magnitude and direction were used in geometry, particularly in the works of
+                            Euclid and Archimedes.</li>
+                        <li>Early ideas of vectors can be seen in the use of geometric representations of physical
+                            quantities.</li>
+                    </ul>
+                </li>
+                <li><b>17th Century:</b>
+                    <ul>
+                        <li>Isaac Newton's work in mechanics introduced the concept of force as a vector quantity.</li>
+                        <li>Vector ideas were implicit in Newton's laws of motion and gravitation.</li>
+                    </ul>
+                </li>
+                <li><b>19th Century:</b>
+                    <ul>
+                        <li>William Rowan Hamilton developed the theory of quaternions, a precursor to vector algebra.
+                        </li>
+                        <li>Hermann Grassmann's work on linear algebra laid the foundation for modern vector spaces.
+                        </li>
+                        <li>Josiah Willard Gibbs and Oliver Heaviside formulated vector calculus, which became essential
+                            for electromagnetic theory.</li>
+                    </ul>
+                </li>
+                <li><b>20th Century:</b>
+                    <ul>
+                        <li>Vectors became extensively used in physics, particularly in quantum mechanics, relativity,
+                            and electromagnetism.</li>
+                        <li>The introduction of tensors, which generalize vectors, had a profound impact on the theory
+                            of relativity.</li>
+                        <li>Vectors and vector spaces became fundamental concepts in computer graphics, engineering, and
+                            computer science.</li>
+                    </ul>
+                </li>
+                <li><b>21st Century:</b>
+                    <ul>
+                        <li>Advancements in technology and computational power have enabled complex vector calculations
+                            and simulations in various fields.</li>
+                        <li>Vectors play a crucial role in machine learning, data science, and artificial intelligence,
+                            particularly in the representation of high-dimensional data.</li>
+                        <li>Ongoing research continues to expand the applications of vectors in new and emerging
+                            scientific and engineering disciplines.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section id="definition">
+            <h2>Definition of Vectors</h2>
+            <p>A vector is a quantity having both magnitude and direction. It is usually represented by an arrow where
+                the length represents the magnitude and the arrowhead indicates the direction. Vectors are fundamental
+                in physics and engineering as they describe quantities that have both size and direction.</p>
+            <p><b>Examples:</b> Displacement, velocity, force.</p>
+            <p>Vector notation: <b>v</b> = (v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>)</p>
+            <p>In a three-dimensional space, a vector can also be represented using the unit vectors <b>i</b>, <b>j</b>,
+                <b>k</b>, which point in the direction of the x, y, and z axes respectively:
+            </p>
+            <p>
+                <b>v</b> = v<sub>1</sub><b>i</b> + v<sub>2</sub><b>j</b> + v<sub>3</sub><b>k</b>
+            </p>
+            <p>Here, <b>i</b>, <b>j</b>, <b>k</b> are unit vectors along the x, y, and z axes:</p>
+            <ul>
+                <li><b>i</b>: Unit vector along the x-axis</li>
+                <li><b>j</b>: Unit vector along the y-axis</li>
+                <li><b>k</b>: Unit vector along the z-axis</li>
+            </ul>
+            <p>These unit vectors have a magnitude of 1 and are orthogonal to each other, providing a basis for
+                representing any vector in three-dimensional space.</p>
+            <p>For example, the vector <b>v</b> = 3<b>i</b> + 2<b>j</b> + 1<b>k</b> has components 3, 2, and 1 along the
+                x, y, and z axes respectively. This means the vector points 3 units in the x direction, 2 units in the y
+                direction, and 1 unit in the z direction.</p>
+
+            <h2>Types of Vectors</h2>
+            <p>Vectors can be classified into different types based on their properties and applications:</p>
+            <ul>
+                <li><b>Zero Vector:</b> A vector with zero magnitude and no specific direction. Represented as <b>0</b>
+                    or (0, 0, 0) in three-dimensional space.</li>
+                <li><b>Unit Vector:</b> A vector with a magnitude of one, used to indicate direction. Represented as
+                    <b>i</b>, <b>j</b>, <b>k</b> in Cartesian coordinates.
+                </li>
+                <li><b>Position Vector:</b> A vector that specifies the position of a point relative to an origin.
+                    Represented as <b>r</b> = (x, y, z).</li>
+                <li><b>Equal Vectors:</b> Vectors that have the same magnitude and direction, regardless of their
+                    initial points.</li>
+                <li><b>Negative Vectors:</b> Vectors that have the same magnitude but opposite direction to a given
+                    vector. If <b>a</b> is a vector, -<b>a</b> is its negative vector.</li>
+                <li><b>Parallel Vectors:</b> Vectors that have the same or opposite direction. They are either in the
+                    same line or in parallel lines.</li>
+                <li><b>Orthogonal Vectors:</b> Vectors that are perpendicular to each other. Their dot product is zero.
+                </li>
+                <li><b>Coplanar Vectors:</b> Vectors that lie in the same plane.</li>
+                <li><b>Collinear Vectors:</b> Vectors that lie along the same line, either in the same or opposite
+                    direction.</li>
+            </ul>
+        </section>
+
+        <section id="linearity">
+            <h2>Linearly Dependent and Independent Vectors</h2>
+            <p><b>Linearly Dependent Vectors:</b> Vectors that can be expressed as a scalar multiple of each other.</p>
+            <p><b>Linearly Independent Vectors:</b> Vectors that cannot be expressed as a scalar multiple of each other.
+            </p>
+            <p><b>Example:</b> Checking linearity of vectors <b>v<sub>1</sub></b> = (1, 2, 3) and <b>v<sub>2</sub></b> =
+                (2, 4, 6).</p>
+            <p>If <b>v<sub>2</sub></b> = k<b>v<sub>1</sub></b>, then they are linearly dependent. Here, k=2.</p>
+        </section>
+
+        <section id="collinearity">
+            <h2>Collinearity of Vectors</h2>
+            <p>Two or three vectors are collinear if they lie along the same line.</p>
+            <p><b>Example:</b> Vectors <b>a</b> = (1, 2) and <b>b</b> = (2, 4) are collinear.</p>
+            <p>Condition for collinearity: <b>b</b> = k<b>a</b> for some scalar k.</p>
+        </section>
+
+        <section id="coplanarity">
+            <h2>Coplanarity of Vectors</h2>
+            <p>Three or four vectors are coplanar if they lie in the same plane.</p>
+            <p><b>Example:</b> Vectors <b>a</b> = (1, 2, 3), <b>b</b> = (4, 5, 6), and <b>c</b> = (7, 8, 9) are coplanar
+                if their scalar triple product is zero.</p>
+            <p>Condition for coplanarity: <b>a</b> · (<b>b</b> × <b>c</b>) = 0</p>
+        </section>
+
+        <section id="products">
+            <h2>Dot & Cross Products</h2>
+            <p><b>Dot Product:</b> The scalar product of two vectors.</p>
+            <p>Formula: <b>a</b> · <b>b</b> = |<b>a</b>| |<b>b</b>| cosθ</p>
+            <p><b>Example:</b> <b>a</b> = (1, 2, 3) and <b>b</b> = (4, 5, 6).</p>
+            <p><b>a</b> · <b>b</b> = 1×4 + 2×5 + 3×6 = 32</p>
+
+            <p><b>Cross Product:</b> The vector product of two vectors.</p>
+            <p>Formula: <b>a</b> × <b>b</b> = |<b>a</b>| |<b>b</b>| sinθ <b>n</b></p>
+            <p><b>Example:</b> <b>a</b> = (1, 2, 3) and <b>b</b> = (4, 5, 6).</p>
+            <p><b>a</b> × <b>b</b> = (2×6 - 3×5, 3×4 - 1×6, 1×5 - 2×4) = (-3, 6, -3)</p>
+
+            <p>Input vectors for dot and cross product calculation:</p>
+            <input type="text" id="vector1" placeholder="Enter vector 1 (e.g., 1,2,3)">
+            <input type="text" id="vector2" placeholder="Enter vector 2 (e.g., 4,5,6)">
+            <button onclick="calculateProducts()">Calculate</button>
+            <p id="product-result"></p>
+        </section>
+
+        <section id="scalar-triple">
+            <h2>Scalar Triple Products</h2>
+            <p>The scalar triple product of three vectors is a scalar quantity.</p>
+            <p>Formula: <b>a</b> · (<b>b</b> × <b>c</b>)</p>
+            <p><b>Example:</b> <b>a</b> = (1, 2, 3), <b>b</b> = (4, 5, 6), <b>c</b> = (7, 8, 9).</p>
+            <p>Scalar triple product: 1(5×9 - 6×8) - 2(4×9 - 6×7) + 3(4×8 - 5×7) = 0</p>
+
+            <p>Input vectors for scalar triple product calculation:</p>
+            <input type="text" id="vectorA" placeholder="Enter vector A (e.g., 1,2,3)">
+            <input type="text" id="vectorB" placeholder="Enter vector B (e.g., 4,5,6)">
+            <input type="text" id="vectorC" placeholder="Enter vector C (e.g., 7,8,9)">
+            <button onclick="calculateScalarTripleProduct()">Calculate</button>
+            <p id="scalar-triple-result"></p>
+        </section>
+
+
+
+        <section id="reciprocal-system">
+            <h2>Reciprocal System</h2>
+            <p>Reciprocal vectors are vectors that satisfy certain orthogonality conditions with the original set of
+                vectors. They are particularly useful in crystallography, physics, and engineering for analyzing wave
+                vectors, lattice structures, and more.</p>
+            <p>Formula: If {<b>a</b>, <b>b</b>, <b>c</b>} is a set of vectors, the reciprocal set {<b>α</b>, <b>β</b>,
+                <b>γ</b>} is defined such that:
+            </p>
+            <ul>
+                <li><b>α</b> · <b>a</b> = 1, <b>α</b> · <b>b</b> = 0, <b>α</b> · <b>c</b> = 0</li>
+                <li><b>β</b> · <b>a</b> = 0, <b>β</b> · <b>b</b> = 1, <b>β</b> · <b>c</b> = 0</li>
+                <li><b>γ</b> · <b>a</b> = 0, <b>γ</b> · <b>b</b> = 0, <b>γ</b> · <b>c</b> = 1</li>
+            </ul>
+            <p>These conditions ensure that each reciprocal vector is orthogonal to the other two original vectors and
+                has a dot product of 1 with its corresponding original vector.</p>
+            <p>To calculate the reciprocal vectors, we use the following formulas in i, j, k notation:</p>
+            <p>If <b>a</b> = a<sub>1</sub><b>i</b> + a<sub>2</sub><b>j</b> + a<sub>3</sub><b>k</b>, <b>b</b> =
+                b<sub>1</sub><b>i</b> + b<sub>2</sub><b>j</b> + b<sub>3</sub><b>k</b>, <b>c</b> = c<sub>1</sub><b>i</b>
+                + c<sub>2</sub><b>j</b> + c<sub>3</sub><b>k</b>, then:</p>
+            <ul>
+                <li><b>α</b> = (b<sub>2</sub>c<sub>3</sub> - b<sub>3</sub>c<sub>2</sub>)<b>i</b> +
+                    (b<sub>3</sub>c<sub>1</sub> - b<sub>1</sub>c<sub>3</sub>)<b>j</b> + (b<sub>1</sub>c<sub>2</sub> -
+                    b<sub>2</sub>c<sub>1</sub>)<b>k</b> / V</li>
+                <li><b>β</b> = (c<sub>2</sub>a<sub>3</sub> - c<sub>3</sub>a<sub>2</sub>)<b>i</b> +
+                    (c<sub>3</sub>a<sub>1</sub> - c<sub>1</sub>a<sub>3</sub>)<b>j</b> + (c<sub>1</sub>a<sub>2</sub> -
+                    c<sub>2</sub>a<sub>1</sub>)<b>k</b> / V</li>
+                <li><b>γ</b> = (a<sub>2</sub>b<sub>3</sub> - a<sub>3</sub>b<sub>2</sub>)<b>i</b> +
+                    (a<sub>3</sub>b<sub>1</sub> - a<sub>1</sub>b<sub>3</sub>)<b>j</b> + (a<sub>1</sub>b<sub>2</sub> -
+                    a<sub>2</sub>b<sub>1</sub>)<b>k</b> / V</li>
+            </ul>
+            <p>Where V is the volume of the parallelepiped formed by vectors <b>a</b>, <b>b</b>, and <b>c</b> and is
+                given by:</p>
+            <p>V = <b>a</b> · (<b>b</b> × <b>c</b>)</p>
+
+            <h3>Example:</h3>
+            <p>Consider the vectors <b>a</b> = 2<b>i</b> + 3<b>j</b> + <b>k</b>, <b>b</b> = <b>i</b> + 2<b>j</b> +
+                3<b>k</b>, <b>c</b> = 3<b>i</b> + <b>j</b> + 2<b>k</b>. The reciprocal vectors can be calculated as:</p>
+            <ul>
+                <li><b>α</b> = ((2*2 - 3*1)<b>i</b> + (3*3 - 1*3)<b>j</b> + (1*1 - 2*2)<b>k</b>) / V</li>
+                <li><b>β</b> = ((1*2 - 2*3)<b>i</b> + (3*3 - 2*3)<b>j</b> + (2*1 - 1*2)<b>k</b>) / V</li>
+                <li><b>γ</b> = ((3*2 - 1*3)<b>i</b> + (1*1 - 2*3)<b>j</b> + (2*2 - 1*3)<b>k</b>) / V</li>
+            </ul>
+            <p>Where V = 2(2*2 - 3*1) - 3(1*2 - 3*3) + 1(1*1 - 3*2).</p>
+
+            <p>Input vectors for reciprocal system calculation:</p>
+            <input type="text" id="vector-a" placeholder="Enter vector a (e.g., 1,2,3)">
+            <input type="text" id="vector-b" placeholder="Enter vector b (e.g., 4,5,6)">
+            <input type="text" id="vector-c" placeholder="Enter vector c (e.g., 7,8,9)">
+            <button onclick="calculateReciprocal()">Calculate</button>
+            <p id="reciprocal-result"></p>
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <section id="applications">
+            <h2>Applications of Vectors</h2>
+            <p>Vectors are used in various fields such as:</p>
+            <ul>
+                <li><b>Physics:</b> Representing quantities like force, velocity, and displacement.</li>
+                <li><b>Engineering:</b> Stress analysis, fluid dynamics, etc.</li>
+                <li><b>Computer Graphics:</b> Modeling and transformations.</li>
+                <li><b>Robotics:</b> Motion planning and control.</li>
+                <li><b>Economics:</b> Representing data points in multi-dimensional spaces.</li>
+                <li><b>Navigation:</b> Determining direction and position.</li>
+            </ul>
+        </section>
+
+        <section id="straight-line">
+            <h2>Vectors in Straight Line</h2>
+            <p>Vectors are fundamental in understanding and calculating various aspects of straight lines in
+                mathematics.</p>
+            <h3>Formulas and Examples:</h3>
+            <p><b>Equation of a Straight Line:</b></p>
+            <p>Vector form: <b>r</b> = <b>a</b> + λ<b>b</b></p>
+            <p>Example: If <b>a</b> = (1, 2, 3) and <b>b</b> = (4, 5, 6), the equation is <b>r</b> = (1, 2, 3) + λ(4, 5,
+                6).</p>
+
+            <p><b>Bisector of Angle:</b></p>
+            <p>Formula: If <b>a</b> and <b>b</b> are two vectors, the bisector is given by (|<b>a</b>|<b>b</b> +
+                |<b>b</b>|<b>a</b>)/( |<b>a</b>| + |<b>b</b>|).</p>
+            <p>Example: For <b>a</b> = (1, 2, 2) and <b>b</b> = (2, 2, 1), bisector = (3(2,2,1) + 3(1,2,2))/6 = (7/6,
+                8/6, 7/6).</p>
+
+            <p><b>Sectional Formula:</b></p>
+            <p>Formula: If <b>A</b> and <b>B</b> are two points and P divides AB in the ratio m:n, then P = (m<b>B</b> +
+                n<b>A</b>)/(m+n).</p>
+            <p>Example: For A = (1, 2) and B = (3, 4), if P divides AB in the ratio 1:1, then P = (1(3,4) + 1(1,2))/2 =
+                (2, 3).</p>
+
+            <p><b>Perpendicular Distance Formula:</b></p>
+            <p>Formula: Distance from point P(x<sub>1</sub>, y<sub>1</sub>) to the line Ax + By + C = 0 is given by
+                |Ax<sub>1</sub> + By<sub>1</sub> + C| / √(A² + B²).</p>
+            <p>Example: For point (1, 1) and line 3x + 4y - 5 = 0, distance = |3(1) + 4(1) - 5| / √(3² + 4²) = 2 / 5 =
+                0.4.</p>
+        </section>
+
+        <section id="skew-lines">
+            <h2>Skew Lines</h2>
+            <p>Skew lines are lines that do not intersect and are not parallel. They do not lie in the same plane.</p>
+            <p><b>Example:</b> Lines <b>l<sub>1</sub></b>: <b>r</b> = <b>a</b> + λ<b>b</b> and <b>l<sub>2</sub></b>:
+                <b>r</b> = <b>c</b> + μ<b>d</b> are skew if there is no common solution for λ and μ.
+            </p>
+            <h3>Shortest Distance Between Skew Lines:</h3>
+            <p>Formula: d = |(<b>a</b> - <b>c</b>) · (<b>b</b> × <b>d</b>)| / |<b>b</b> × <b>d</b>|</p>
+            <p>Example: For lines <b>l<sub>1</sub></b>: <b>r</b> = (1, 2, 3) + λ(4, 5, 6) and <b>l<sub>2</sub></b>:
+                <b>r</b> = (7, 8, 9) + μ(10, 11, 12), the shortest distance is calculated as follows:
+            </p>
+            <ul>
+                <li><b>a</b> - <b>c</b> = (1 - 7, 2 - 8, 3 - 9) = (-6, -6, -6)</li>
+                <li><b>b</b> × <b>d</b> = (4, 5, 6) × (10, 11, 12) = (30 - 36, 24 - 60, 44 - 50) = (-6, -36, -6)</li>
+                <li>|<b>b</b> × <b>d</b>| = √((-6)² + (-36)² + (-6)²) = √(6×6 + 36×36 + 6×6) = √(6×6(1 + 6×6)) = 6√(1 +
+                    36) = 6√37 = 36√37 = 12</li>
+                <li>d = |(<b>a</b> - <b>c</b>) · (<b>b</b> × <b>d</b>)| / |<b>b</b> × <b>d</b>| = |-6(1) + -6(6) +
+                    -6(0)| / |6√37| = 0.6</li>
+            </ul>
+            <p>Therefore, the shortest distance is 6√37.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Raviranjan. All rights reserved.</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
